@@ -25,8 +25,8 @@ def preprocess(image,angle=None,crop = False, threshold = None, row_min=0, row_m
         outimage = sigmoid_image
     
     if aff == 1: 
-        images_list = [image,rotated,clahe_image,lineEliminated,clip_intensity_image,denoised,outimage]
-        labels = ["image","rotated","clahe","eliminate lines","clip_intensity_image","denoised","preprocessed"]
+        images_list = [image,rotated,clahe_image,clip_intensity_image,denoised,outimage]
+        labels = ["image","rotated","clahe","clip_intensity_image","denoised","preprocessed"]
 
         show_images(images_list,labels)
     

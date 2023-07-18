@@ -58,6 +58,8 @@ def find_rotation(img):
 
     dst = cv2.Canny(img, (np.max(img) - np.min(img))/10 , np.max(img), None, 3)
     lines = cv2.HoughLines(dst, 1, np.pi / 180, 80, None, 0, 0)
+    if lines is None: 
+        lines = cv2.HoughLines(dst, 1, np.pi / 180, 40, None, 0, 0)
     if lines is not None: # consider the line with maximum votes
         max_votes = -np.inf   
         best_line = None
@@ -95,6 +97,6 @@ def sigmoid(img,cutoff=.5, gain=10):
 
 def eliminate_lines(img, threshold = None):
     if threshold is None: 
-        threshold = np.quantile(img.flatten(), 0.92)
+        threshold = np.quantile(img.flatten(), 0.4)
     img[img < threshold] = 0
     return img
