@@ -45,7 +45,7 @@ def crop(image, row_min, row_max, col_min, col_max):
 
 def show_images(images,labels = None):  
     #Displays a list of images in a row 
-    fig, axes = plt.subplots(nrows=1, ncols=len(images), figsize=(20, 15))
+    fig, axes = plt.subplots(nrows=1, ncols=len(images), figsize=(15, 8))
     for i, image in enumerate(images):
         axes[i].imshow(image, cmap='gray')
         if labels and (len(labels) == len(images)): 
@@ -60,7 +60,7 @@ def show_modification(initial, modified, modification = None):
     for i in range (len(initial)):
         pl1 = axes[0][i].imshow(initial[i], cmap='gray') 
         pl2 = axes[1][i].imshow(modified[i], cmap='gray')
-        axes[0][i].title.set_text('initial image ' + str(i)) 
+        axes[0][i].title.set_text('Image ' + str(i)) 
         if modification != None:
             axes[1][i].title.set_text(str(modification)+ ' image ' + str(i))
         else:

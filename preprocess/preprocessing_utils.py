@@ -73,7 +73,11 @@ def find_rotation(img):
     else:
         angle = 0
         
-    return angle
+    # if np.abs(angle)<= np.abs(angle-180):
+    #     return (angle)
+    # else: 
+    #     return(angle-180)
+    return(angle)
 
    
     

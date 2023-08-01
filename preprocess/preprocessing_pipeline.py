@@ -1,9 +1,9 @@
 #Preprocessing pipeline
-from image_utils import crop,show_images,normalize_image
+from image_utils import crop,show_images,normalize_image,show_modification
 from preprocessing_utils import vertical_orientation,clahe,eliminate_lines,clip_intensity,remove_background,denoise_image,sigmoid
 
 
-def preprocess(image,angle=None,crop = False, threshold = None, row_min=0, row_max=-1, col_min=0, col_max=-1, clip_limit=None, clip_value=None, clip_limit_clahe=None, kernel_size=None, nbins=256, weight=0.02, cutoff=.05, gain=1, aff=0, bg=False):
+def preprocess(image,angle=None,crop = False, threshold = None, row_min=0, row_max=-1, col_min=0, col_max=-1, clip_limit=None, clip_value=None, clip_limit_clahe=None, kernel_size=None, nbins=256, weight=0.02, cutoff=.05, gain=1, aff=0, bg=False, details=False):
     # apply transformations to the images
     # crop is optional 
     # aff = 1 to plot the different phases of preprocessing
@@ -29,5 +29,13 @@ def preprocess(image,angle=None,crop = False, threshold = None, row_min=0, row_m
         labels = ["image","rotated","clahe","clip_intensity_image","denoised","preprocessed"]
 
         show_images(images_list,labels)
+    
+    if details:
+        
+        show_images([image,rotated],["image","rotated"])
+        show_images([rotated,clahe_image],["rotated","CLAHE"])
+        show_images([lineEliminated, clip_intensity_image],["CLAHE", "Clip pixels range"])
+        show_images([clip_intensity_image,denoised],["Clipped","TV Denoising"])
+        
     
     return(outimage)
