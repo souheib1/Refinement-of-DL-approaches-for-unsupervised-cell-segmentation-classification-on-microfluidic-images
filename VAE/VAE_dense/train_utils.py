@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from VAE_architecture import BetaVAE
 
 
-def train_VAE(crops, n_rows=190, n_cols=105, latent_dim=8, beta=1, epochs=20, batch_size=32,
+def train_VAE(crops, n_rows=190, n_cols=105, latent_dim=8, beta=1, epochs=50, batch_size=32,
                   learning_rate=1e-3, validation_split=0.2, plot_history=True,
                   save_model=True, saving_path='./newmodel'):
 
