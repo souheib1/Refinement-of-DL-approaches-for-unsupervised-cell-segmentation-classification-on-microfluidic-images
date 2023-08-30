@@ -3,7 +3,19 @@ Research internship 2023 at Telecom Paris
 
 
 
-1. Adapt image pre-processing to the density of cells imaged (robustness to contrast change).
+## 1. Adapt image pre-processing to the density of cells imaged
+
+The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. This step helps avoid orientation learning issues when using Cellpose and Variational autoencoders later on. Additionally, the RGB images are transformed into grayscale images, focusing on utilizing the lamin fluorescence, corresponding to the second image channel. 
+
+To enhance the contrast intensity of the fluorescence within the nuclei, some preprocessing steps are applied :
+    
+**1. CLAHE** (contrast-limited adaptive histogram equalization)
+**2. Normalization** (converting the image to floating-point format, and scaling the pixel values to the range [0, 1] )
+**3. Clip pixels intensity range** (adjusts image intensities to enhance contrast by clipping values within a range defined by stats such as percentile to define clip limit)
+**4. TV Denoising** (Total Variation denoising is used to reduce noise in images while preserving edges and details. We chose to use Chambolle's method as an iterative algorithm to efficiently compute the denoised image.)
+
+By leveraging these image pre-processing techniques, we aim to prepare the data for accurate cell segmentation and make it well-suited for Variational Autoencoders. 
+
 
 2. Refine a CNN solution for cell segmentation based on preliminary results trained on CellPose and error annotation exploring "Human in the loop" training.
 
