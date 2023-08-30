@@ -43,6 +43,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 | Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Mnist_Z_16  | 0.9018  | 0.251985  | 1.8037  | 1107.44  |
+| Mnist_Z_32  | 0.9042 |  0.184489 | 2.4797  |  712.183 |
 
 
 ### 3.2 FashionMNIST dataset:
@@ -53,6 +54,8 @@ The segmentation masks are used to extract cell patches from the image by genera
 | Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | FashioMnist_Z_16  | 0.9  |  0.209225  | 2.02346  | 944.545  |
+| FashionMnist_Z_32   |     0.970153      |     0.217652 | 1.75011 |  807.943 |
+
 ## References
 <a id="1">[1]</a> 
 Stringer, C., Wang, T., Michaelos, M., & Pachitariu, M. (2021). 
