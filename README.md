@@ -25,7 +25,10 @@ To enhance the contrast intensity of the fluorescence within the nuclei, some pr
 By leveraging these image pre-processing techniques, we aim to prepare the data for accurate cell segmentation and make it well-suited for Variational Autoencoders. 
 
 ## 2. Refine a CNN solution for cell segmentation 
-based on preliminary results trained on CellPose [[1]](#1) and error annotation exploring "Human in the loop" training.
+The segmentation is based on preliminary results trained on CellPose [[1]](#1) and error annotation exploring "Human in the loop" training.
+
+![segmentation](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/8c5ac525-6480-410e-aff8-4741fee998df)
+
 
 3. Develop an "outliers" filter to detect erroneous cell patches (i.e. patches with "out of range" intensities, "multi-cell" patches).
 
