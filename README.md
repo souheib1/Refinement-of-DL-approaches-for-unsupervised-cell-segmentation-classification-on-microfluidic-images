@@ -29,10 +29,10 @@ The segmentation is based on preliminary results trained on CellPose [[1]](#1) a
 
 ![segmentation](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/8c5ac525-6480-410e-aff8-4741fee998df)
 
+![heatmap_labeling](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/67bfa7c8-9b01-4adf-9882-816dec1164e6)
 
-3. Develop an "outliers" filter to detect erroneous cell patches (i.e. patches with "out of range" intensities, "multi-cell" patches).
 
-4. Refine a preliminary VAE (variational auto-encoder) approach pre-trained on several cell types for unsupervised clustering to several datasets with different experimental conditions.
+## 3. Refine VAE (variational auto-encoder) and cVAE (conditional variational auto-encoder) approaches for unsupervised clustering to several datasets with different mutations and experimental conditions.
 
 
 ## References
