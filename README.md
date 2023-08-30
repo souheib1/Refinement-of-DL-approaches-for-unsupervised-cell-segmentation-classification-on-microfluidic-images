@@ -36,7 +36,23 @@ The segmentation masks are used to extract cell patches from the image by genera
 
 ## 3. Refine VAE (variational auto-encoder) and cVAE (conditional variational auto-encoder) approaches for unsupervised clustering to several datasets with different mutations and experimental conditions.
 
+### 3.1 MNIST dataset: 
 
+![dd](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/16de79c2-d915-42df-b045-b9c5b2ba90c8)
+
+| Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Mnist_Z_16  | 0.9018  | 0.251985  | 1.8037  | 1107.44  |
+
+
+### 3.2 FashionMNIST dataset:
+
+![ee](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/58692ffe-d72c-41b9-8999-cedf2cc319d0)
+
+
+| Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| FashioMnist_Z_16  | 0.9  |  0.209225  | 2.02346  | 944.545  |
 ## References
 <a id="1">[1]</a> 
 Stringer, C., Wang, T., Michaelos, M., & Pachitariu, M. (2021). 
