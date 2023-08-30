@@ -61,6 +61,19 @@ The segmentation masks are used to extract cell patches from the image by genera
 | FashioMnist_Z_16  | 0.9  |  0.209225  | 2.02346  | 944.545  |
 | FashionMnist_Z_32   |     0.970153      |     0.217652 | 1.75011 |  807.943 |
 
+### 3.3 Wild-type cells vs BRAF mutant:
+
+![tt](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/ec6c051b-8f82-493e-8fe4-710a084ba9fc)
+
+![ttt](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/b46bb62f-fbab-4cd0-9ff2-d99ba5abe3e0)
+
+| Label | number of cells | % occurrences of wild cells | % occurrences of mutation cells |
+| ------------- | ------------- | ------------- | ------------- | 
+| 0 | 401 | 66.08% | 33.92% |
+| 1 | 374 | 41.71% | 58.29% |
+| 2 | 166 | 70.48% | 29.52% |
+| 3 | 135 | 7.41% | 92.59% |
+
 ## References
 <a id="1">[1]</a> 
 Stringer, C., Wang, T., Michaelos, M., & Pachitariu, M. (2021). 
