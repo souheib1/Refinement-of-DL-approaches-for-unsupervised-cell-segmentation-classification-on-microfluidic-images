@@ -25,8 +25,15 @@ To enhance the contrast intensity of the fluorescence within the nuclei, some pr
 By leveraging these image pre-processing techniques, we aim to prepare the data for accurate cell segmentation and make it well-suited for Variational Autoencoders. 
 
 ## 2. Refine a CNN solution for cell segmentation 
-based on preliminary results trained on CellPose and error annotation exploring "Human in the loop" training.
+based on preliminary results trained on CellPose [[1]](#1) and error annotation exploring "Human in the loop" training.
 
 3. Develop an "outliers" filter to detect erroneous cell patches (i.e. patches with "out of range" intensities, "multi-cell" patches).
 
 4. Refine a preliminary VAE (variational auto-encoder) approach pre-trained on several cell types for unsupervised clustering to several datasets with different experimental conditions.
+
+
+## References
+<a id="1">[1]</a> 
+Stringer, C., Wang, T., Michaelos, M., & Pachitariu, M. (2021). 
+Cellpose: a generalist algorithm for cellular segmentation. 
+Nature methods, 18(1), 100-106.
