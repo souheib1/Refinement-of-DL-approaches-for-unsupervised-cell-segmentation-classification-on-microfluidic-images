@@ -29,6 +29,8 @@ The segmentation is based on preliminary results trained on CellPose [[1]](#1) a
 
 ![segmentation](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/8c5ac525-6480-410e-aff8-4741fee998df)
 
+The segmentation masks are used to extract cell patches from the image by generating bonding boxes based on cells annotation.
+
 ![heatmap_labeling](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/67bfa7c8-9b01-4adf-9882-816dec1164e6)
 
 
