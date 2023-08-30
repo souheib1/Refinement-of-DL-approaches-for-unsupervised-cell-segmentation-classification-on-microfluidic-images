@@ -40,6 +40,9 @@ The segmentation masks are used to extract cell patches from the image by genera
 
 ![dd](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/16de79c2-d915-42df-b045-b9c5b2ba90c8)
 
+![fff](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/5130039a-d1d0-40b3-9ac3-ef8ee82a0b33)
+
+
 | Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Mnist_Z_16  | 0.9018  | 0.251985  | 1.8037  | 1107.44  |
@@ -49,6 +52,8 @@ The segmentation masks are used to extract cell patches from the image by genera
 ### 3.2 FashionMNIST dataset:
 
 ![ee](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/58692ffe-d72c-41b9-8999-cedf2cc319d0)
+
+![ff](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/c8f46a5e-5284-4c8c-9f3c-aed652751686)
 
 
 | Dataset_Z_latentDim  | Accuracy | Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
