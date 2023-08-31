@@ -5,8 +5,7 @@
 
 ## 1. Adapt image pre-processing to the density of cells imaged
 
-The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. This step helps avoid orientation learning issues when using Cellpose and Variational autoencoders later on. Additionally, the RGB images are transformed into grayscale images, focusing on utilizing the lamin fluorescence, corresponding to the second image channel. 
-
+The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. 
 To enhance the contrast intensity of the fluorescence within the nuclei, some preprocessing steps are applied :
     
 **1. CLAHE** (contrast-limited adaptive histogram equalization)
