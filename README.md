@@ -69,7 +69,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 
 | Label | number of cells | % occurrences of wild cells | % occurrences of mutation cells |
 | ------------- | ------------- | ------------- | ------------- | 
-| 0 | 183 | 53% | 47% |
+| 0 | 183 | 53.01% | 46.09% |
 | 1 | 345 | 36.52% | 63.48% |
 | 2 | 98 | 7.29% | 92.71% |
 | 3 | 381 | 72.58% | 27.42% |
