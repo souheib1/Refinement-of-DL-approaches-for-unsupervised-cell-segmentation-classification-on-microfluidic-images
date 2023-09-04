@@ -2,8 +2,8 @@
 # Research internship 2023 at Telecom Paris
 
 
-
-## 1. Adapt image pre-processing to the density of cells imaged
+## Summary
+### 1. Adapt image pre-processing to the density of cells imaged
 
 The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. 
 To enhance the contrast intensity of the fluorescence within the nuclei, some preprocessing steps are applied :
@@ -23,7 +23,7 @@ To enhance the contrast intensity of the fluorescence within the nuclei, some pr
 
 By leveraging these image pre-processing techniques, we aim to prepare the data for accurate cell segmentation and make it well-suited for Variational Autoencoders. 
 
-## 2. Refine a CNN solution for cell segmentation 
+### 2. Refine a CNN solution for cell segmentation 
 The segmentation is based on preliminary results trained on CellPose [[1]](#1) and error annotation exploring "Human in the loop" training.
 
 ![segmentation](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/8c5ac525-6480-410e-aff8-4741fee998df)
@@ -33,9 +33,9 @@ The segmentation masks are used to extract cell patches from the image by genera
 ![heatmap_labeling](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/67bfa7c8-9b01-4adf-9882-816dec1164e6)
 
 
-## 3. Refine VAE (variational auto-encoder) and cVAE (conditional variational auto-encoder) approaches for unsupervised clustering to several datasets with different mutations and experimental conditions.
+### 3. Refine VAE (variational auto-encoder) and cVAE (conditional variational auto-encoder) approaches for unsupervised clustering to several datasets with different mutations and experimental conditions.
 
-### 3.1 MNIST dataset: 
+#### 3.1 MNIST dataset: 
 
 ![dd](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/16de79c2-d915-42df-b045-b9c5b2ba90c8)
 
@@ -48,7 +48,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 | Mnist_Z_32  | 0.9042 |  0.184489 | 2.4797  |  712.183 |
 
 
-### 3.2 FashionMNIST dataset:
+#### 3.2 FashionMNIST dataset:
 
 ![ee](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/58692ffe-d72c-41b9-8999-cedf2cc319d0)
 
@@ -60,7 +60,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 | FashioMnist_Z_16  | 0.9  |  0.209225  | 2.02346  | 944.545  |
 | FashionMnist_Z_32   |     0.970153      |     0.217652 | 1.75011 |  807.943 |
 
-### 3.3 Wild-type cells vs BRAF mutant:
+#### 3.3 Wild-type cells vs BRAF mutant:
 
 ![tt](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/ec6c051b-8f82-493e-8fe4-710a084ba9fc)
 
