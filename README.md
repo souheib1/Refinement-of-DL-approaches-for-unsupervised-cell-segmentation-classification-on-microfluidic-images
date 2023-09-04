@@ -1,8 +1,8 @@
 # Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images
-# Research internship 2023 at Telecom Paris
+##  Research internship 2023 at Telecom Paris
 
 
-## Summary
+
 ### 1. Adapt image pre-processing to the density of cells imaged
 
 The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. 
