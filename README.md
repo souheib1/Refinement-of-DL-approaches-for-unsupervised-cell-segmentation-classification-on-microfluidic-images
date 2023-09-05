@@ -6,8 +6,6 @@ Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-
 
 As part of this research internship, our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system. This system is designed to detect pathological conditions that provoke alterations in cell mechanics. Our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system, designed to detect pathological conditions that provoke alterations in cell mechanics. Our research includes several challenging learning tasks, including weakly supervised cell segmentation and unsupervised cell clustering. To overcome these challenges, we rely on convolutional neural networks (CNNs) and variational autoencoders (VAEs), exploited to reveal hidden information in microfluidic imaging.
 
-Certainly! Here's a "Getting Started" section for your project's README, based on the provided information:
-
 ## Getting Started
 
 ### Prerequisites
