@@ -1,6 +1,6 @@
 # Project Description
 
-Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images** project! This initiative is part of my internship within a of a collaboration between the hydrodynamics laboratory at École Polytechnique (LadHyX) and the biomedical imaging group at Télécom Paris. The goal is to explore the field of deep learning within the domain of cell biology through rigorous research and hands-on experimentation.
+Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images** project! This project is part of my internship within a of a collaboration between the hydrodynamics laboratory at École Polytechnique (LadHyX) and the biomedical imaging group at Télécom Paris. The goal is to explore the field of deep learning within the domain of cell biology through rigorous research and hands-on experimentation.
 
 ## Project Overview
 
