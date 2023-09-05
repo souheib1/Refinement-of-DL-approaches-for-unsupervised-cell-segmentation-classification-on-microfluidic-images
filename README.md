@@ -58,10 +58,6 @@ Before you begin, ensure that you have the following prerequisites installed on 
 
 6. **Explore the Project**: You're now ready to explore the project. You can use the provided code examples and documentation to understand how the project functions.
 
-If you have any questions or need further assistance, feel free to reach out to us through the contact information provided in the README.
-
-
-
 
 
 ## Summary
