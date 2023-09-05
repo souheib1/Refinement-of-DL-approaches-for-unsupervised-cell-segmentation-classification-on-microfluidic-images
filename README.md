@@ -1,10 +1,10 @@
 # Project Description
 
-Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images** research internship project! This initiative is part of a collaboration between the hydrodynamics laboratory at École Polytechnique (LadHyX) and the biomedical imaging group at Télécom Paris. The goal is to explore the field of deep learning within the domain of cell biology through rigorous research and hands-on experimentation.
+Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images** project! This initiative is part of my internship within a of a collaboration between the hydrodynamics laboratory at École Polytechnique (LadHyX) and the biomedical imaging group at Télécom Paris. The goal is to explore the field of deep learning within the domain of cell biology through rigorous research and hands-on experimentation.
 
 ## Project Overview
 
-As part of this research internship, our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system. This system is designed to detect pathological conditions that provoke alterations in cell mechanics. Our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system, designed to detect pathological conditions that provoke alterations in cell mechanics. Our research includes several challenging learning tasks, including weakly supervised cell segmentation and unsupervised cell clustering. To overcome these challenges, we rely on convolutional neural networks (CNNs) and variational autoencoders (VAEs), exploited to reveal hidden information in microfluidic imaging.
+As part of this research internship, our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system. This system is designed to detect pathological conditions that provoke alterations in cell mechanics. Our research includes several challenging learning tasks, including weakly supervised cell segmentation and unsupervised cell clustering. To overcome these challenges, we rely on convolutional neural networks (CNNs) and variational autoencoders (VAEs), exploited to reveal hidden information in microfluidic imaging.
 
 ## Getting Started
 
