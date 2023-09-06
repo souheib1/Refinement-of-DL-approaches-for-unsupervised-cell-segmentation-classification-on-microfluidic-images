@@ -1,8 +1,66 @@
-# Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images
-##  Research internship 2023 at Telecom Paris
+# Project Description
+
+Welcome to the **Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images** project! This project is part of my internship within a collaboration between the hydrodynamics laboratory at École Polytechnique (LadHyX) and the biomedical imaging group at Télécom Paris. The goal is to explore the field of deep learning within the domain of cell biology through rigorous research and hands-on experimentation.
+
+## Project Overview
+
+As part of this research internship, our primary objective is to enhance Deep Learning tools meticulously trained on an internal microfluidic system. This system is designed to detect pathological conditions that provoke alterations in cell mechanics. Our research includes several challenging learning tasks, including weakly supervised cell segmentation and unsupervised cell clustering. To overcome these challenges, we rely on convolutional neural networks (CNNs) and variational autoencoders (VAEs), exploited to reveal hidden information in microfluidic imaging.
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure that you have the following prerequisites installed on your system:
+
+- **Python**: You'll need Python 3.7 for running the project.
+
+- **pip**: Make sure you have `pip`, the Python package manager, installed.
+
+### Installation
+
+1. **Clone the Repository**: Start by cloning this GitHub repository to your local machine. You can do this by running the following command in your terminal:
+
+   ```bash
+   git clone https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images.git
+   ```
+
+2. **Navigate to the Project Directory**: Change your current directory to the project's root directory:
+
+   ```bash
+   cd Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images
+   ```
+
+3. **Create a Virtual Environment (Optional)**: It's recommended to create a virtual environment to isolate your project dependencies. You can create one using `venv` or `virtualenv`. For example:
+
+   ```bash
+   python -m venv myenv
+   ```
+
+4. **Activate the Virtual Environment (Optional)**: If you created a virtual environment, activate it. On Windows, you can do this with:
+
+   ```bash
+   myenv\Scripts\activate
+   ```
+
+   On macOS and Linux:
+
+   ```bash
+   source myenv/bin/activate
+   ```
+
+5. **Install Dependencies**: Install the required libraries and dependencies using `pip` by running:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   This command will install all the necessary packages and their specific versions listed in the `requirements.txt` file.
+
+6. **Explore the Project**: You're now ready to explore the project. You can use the provided code examples and documentation to understand how the project functions.
 
 
 
+## Summary
 ### 1. Adapt image pre-processing to the density of cells imaged
 
 The first step in the image preprocessing pipeline is to rotate the images to ensure that the nuclei are in a fixed orientation. 
@@ -73,6 +131,8 @@ The segmentation masks are used to extract cell patches from the image by genera
 | 1 | 345 | 36.52% | 63.48% |
 | 2 | 98 | 7.29% | 92.71% |
 | 3 | 381 | 72.58% | 27.42% |
+
+**Research Internship - 2023 at Télécom Paris**
 
 ## References
 <a id="1">[1]</a> 
