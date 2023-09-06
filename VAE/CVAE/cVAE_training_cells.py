@@ -30,17 +30,21 @@ parser.add_argument('--latent_dim', type=int, default=64, help='Dimension of the
 parser.add_argument('--beta', type=float, default=1.0, help='Beta value for Beta-VAE')
 parser.add_argument('--epochs', type=int, default=50, help='number of epochs for the training')
 parser.add_argument('--path', type=str, default='./cell_data_balanced_2classes_Wild_PIK3CA/', help='path to the dataset')
+parser.add_argument('--input_size', type=int, default=192, help='size in pixels of the input images')
 
 args = parser.parse_args()
 beta = args.beta
 latent_dim = args.latent_dim
 epochs = args.epochs
 path = args.path
+input_size = args.input_size
 
 print("latent_dim set to ",latent_dim)
 print("beta set to ",beta)
 print("epochs set to ",epochs)
 print("path to dataset set to ",path)
+print("input size set to ",input_size)
+
 
 device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
 batch_size = 128
@@ -92,13 +96,13 @@ print("X_test shape:", X_test.shape)
 print("Y_test shape:", Y_test.shape)
 
 
-model = cVAE(num_labels=2, latent_dim=latent_dim,input_size=192).to(device)
+model = cVAE(num_labels=2, latent_dim=latent_dim,input_size=input_size).to(device)
 
 
 model = train_cVAE(model, beta=beta, 
                    epochs= epochs, train_loader=train_loader, 
                    test_loader=test_loader, 
-                   optimizer=torch.optim.Adamax(model.parameters(), lr=1e-1),
+                   optimizer=torch.optim.Adamax(model.parameters(), lr=1e-3),
                    criteration = loss_vae, 
                    save_model=True, 
                    saving_path='./models/',
