@@ -58,58 +58,7 @@ Before you begin, ensure that you have the following prerequisites installed on 
 
 6. **Explore the Project**: You're now ready to explore the project. You can use the provided code examples and documentation to understand how the project functions.
 
-To add documentation to your README file on how to use the Python script for training a cVAE on a custom dataset, you can integrate the following information into your existing README:
-
-### Custom Dataset Training with cVAE
-
-This section provides instructions on how to use the provided Python script to train a conditional Variational Autoencoder (cVAE) on your custom dataset. Follow these steps to get started:
-
-#### Prerequisites
-
-Before you begin, make sure you have the following prerequisites installed on your system:
-
-- **Python 3.x**: You'll need Python 3.7 or later to run the project.
-- **pip**: Ensure that you have `pip`, the Python package manager, installed.
-
-#### Installation
-
-1. **Clone the Repository**: Start by cloning this GitHub repository to your local machine:
-
-   ```bash
-   git clone https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images.git
-   ```
-
-2. **Navigate to the Project Directory**: Change your current directory to the project's root directory:
-
-   ```bash
-   cd Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images
-   ```
-
-3. **Create a Virtual Environment (Optional)**: For isolation of project dependencies, it's recommended to create a virtual environment using `venv` or `virtualenv`. For example:
-
-   ```bash
-   python -m venv myenv
-   ```
-
-4. **Activate the Virtual Environment (Optional)**: If you created a virtual environment, activate it. On Windows:
-
-   ```bash
-   myenv\Scripts\activate
-   ```
-
-   On macOS and Linux:
-
-   ```bash
-   source myenv/bin/activate
-   ```
-
-5. **Install Dependencies**: Install the required libraries and dependencies listed in the `requirements.txt` file:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-#### Usage Instructions
+#### Custom Dataset Training with cVAE
 
 You can now use the Python script `train_cVAE.py` to train your cVAE model. Customize the following command to suit your dataset and training preferences:
 
