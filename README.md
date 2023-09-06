@@ -58,6 +58,110 @@ Before you begin, ensure that you have the following prerequisites installed on 
 
 6. **Explore the Project**: You're now ready to explore the project. You can use the provided code examples and documentation to understand how the project functions.
 
+To add documentation to your README file on how to use the Python script for training a cVAE on a custom dataset, you can integrate the following information into your existing README:
+
+### Custom Dataset Training with cVAE
+
+This section provides instructions on how to use the provided Python script to train a conditional Variational Autoencoder (cVAE) on your custom dataset. Follow these steps to get started:
+
+#### Prerequisites
+
+Before you begin, make sure you have the following prerequisites installed on your system:
+
+- **Python 3.x**: You'll need Python 3.7 or later to run the project.
+- **pip**: Ensure that you have `pip`, the Python package manager, installed.
+
+#### Installation
+
+1. **Clone the Repository**: Start by cloning this GitHub repository to your local machine:
+
+   ```bash
+   git clone https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images.git
+   ```
+
+2. **Navigate to the Project Directory**: Change your current directory to the project's root directory:
+
+   ```bash
+   cd Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images
+   ```
+
+3. **Create a Virtual Environment (Optional)**: For isolation of project dependencies, it's recommended to create a virtual environment using `venv` or `virtualenv`. For example:
+
+   ```bash
+   python -m venv myenv
+   ```
+
+4. **Activate the Virtual Environment (Optional)**: If you created a virtual environment, activate it. On Windows:
+
+   ```bash
+   myenv\Scripts\activate
+   ```
+
+   On macOS and Linux:
+
+   ```bash
+   source myenv/bin/activate
+   ```
+
+5. **Install Dependencies**: Install the required libraries and dependencies listed in the `requirements.txt` file:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+#### Usage Instructions
+
+You can now use the Python script `train_cVAE.py` to train your cVAE model. Customize the following command to suit your dataset and training preferences:
+
+```bash
+cd .\VAE\CVAE\
+
+python train_cVAE.py --latent_dim <latent_dim> --beta <beta> --epochs <epochs> --path <dataset_path> --input_size <input_size> --saving_path <saving_path>
+```
+
+- `--latent_dim`: Set the dimension of the latent space (default is 64).
+- `--beta`: Adjust the Beta value for Beta-VAE (default is 1.0).
+- `--epochs`: Specify the number of training epochs (default is 50).
+- `--path`: Provide the path to your custom dataset.
+- `--input_size`: Define the size in pixels of the input images (default is 192).
+- `--saving_path`: Specify the path to save the trained model (default is './models/').
+
+Example usage:
+
+```bash
+python train_cVAE.py --latent_dim 64 --beta 1.0 --epochs 50 --path ./custom_dataset/ --input_size 192 --saving_path ./trained_models/
+```
+
+Please make sure that your custom dataset adheres to the specified structure and preprocessing requirements as described in the "Dataset Preparation" section below.
+
+#### Dataset Preparation
+
+To prepare your custom dataset for training, ensure that it follows this structure:
+
+- Place your images in a folder.
+- Organize images into subfolders, each representing a class or category.
+- Resize images to the desired input size (e.g., 192x192 pixels).
+
+Example dataset structure:
+
+```
+custom_dataset/
+├── class_1/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+├── class_2/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+└── ...
+```
+
+When running the script, use the `--path` argument to specify the path to your custom dataset.
+
+#### Results and Output
+
+After training, the cVAE model will be saved in the directory specified by `--saving_path`. Depending on your use case, additional results or evaluation metrics may be provided.
 
 
 ## Summary
