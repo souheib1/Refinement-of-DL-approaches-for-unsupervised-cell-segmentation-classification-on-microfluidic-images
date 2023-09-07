@@ -14,7 +14,7 @@ import torch.utils.data as data_utils
 from torchvision import datasets, transforms
 import matplotlib.pyplot as plt
 
-device = 'cuda:2' if torch.cuda.is_available() else 'cpu'
+device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
 batch_size = 128
 
 class cVAE2(nn.Module):
@@ -28,8 +28,8 @@ class cVAE2(nn.Module):
         self.latent_dim = latent_dim
         self.input_size = input_size
         self.label = nn.Embedding(num_labels, latent_dim)
-        self.linear1 = nn.Linear(latent_dim,latent_dim)
-        self.linear2 = nn.Linear(latent_dim,latent_dim)
+        self.linear1 = nn.Linear(latent_dim,latent_dim - latent_dim // 8 )
+        self.linear2 = nn.Linear(latent_dim,latent_dim // 8)
         self.contact_activation = nn.Sigmoid()        
         self.beta = beta
         # Calculate the number of output features after encoder convolutions
@@ -49,7 +49,7 @@ class cVAE2(nn.Module):
         self.flatten_z_log_var = nn.Linear(self.encoder_output_size, out_features=latent_dim)
         self.softplus = nn.Softplus()
 
-        self.decode_linear = nn.Linear(latent_dim*2, self.encoder_output_size)
+        self.decode_linear = nn.Linear(latent_dim, self.encoder_output_size)
         self.decode_2 = nn.ConvTranspose2d(in_channels=convDim2, out_channels=convDim1,
                                            kernel_size=kernel_size, stride=2, padding=1)
         self.decode_1 = nn.ConvTranspose2d(in_channels=convDim1, out_channels=n_channels,
@@ -77,7 +77,7 @@ class cVAE2(nn.Module):
         return z_mean + torch.exp(0.5 * z_log_var) * epsilon
         
         
-    def encode(self, x, y):
+    def encode(self, x,y):
         y = self.label(y)
         x = self.encoder(x)
         x = x.view(x.size(0), -1)
@@ -87,6 +87,7 @@ class cVAE2(nn.Module):
         x = self.linear1(x)
         y = self.linear2(y)
         z = self.contact_activation(torch.cat((x, y), dim = 1))
+        z = z.view(z.size(0), -1)
         return z
     
         
@@ -102,11 +103,13 @@ class cVAE2(nn.Module):
         y = self.label(y)
         x = self.encoder(x)
         x = x.view(x.size(0), -1)
-        z_mean, z_log_var = self.flatten_z_mean(x), self.flatten_z_log_var(x)
+        z_mean = self.flatten_z_mean(x)
+        z_log_var = self.softplus(self.flatten_z_log_var(x))
         x = self.sampling(z_mean, z_log_var)
         x = self.linear1(x)
         y = self.linear2(y)
         z = self.contact_activation(torch.cat((x, y), dim = 1))
+        z = z.view(z.size(0), -1)
         x = self.decode_linear(z)
         x = x.view(x.size(0), self.convDim2, self.input_size // 4, self.input_size // 4)
         x = F.relu(self.decode_2(x))
@@ -115,9 +118,11 @@ class cVAE2(nn.Module):
     
     
 def KL_divergence(z_mean, z_log_var):
-    loss = -0.5 * torch.sum(1 + z_log_var - z_mean.pow(2) - z_log_var.exp()) / z_mean.size(dim=0)
+    #z_log_var = torch.clamp(loss, max=10)
+    loss = -0.5 * torch.mean(1 + z_log_var - z_mean.pow(2) - z_log_var.exp())
+    loss = F.softplus(loss)
     clipped_loss = loss
-    #clipped_loss = torch.clamp(loss, max=100)
+    # clipped_loss = torch.clamp(loss, max=10)
     return clipped_loss
 
 

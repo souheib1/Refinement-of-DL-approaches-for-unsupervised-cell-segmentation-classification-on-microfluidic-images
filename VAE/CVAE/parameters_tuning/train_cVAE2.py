@@ -22,7 +22,7 @@ sns.set_style('darkgrid')
 import argparse
 
 from cVAE_architecture2 import cVAE2, loss_vae
-from cVAE_train_utils import train_cVAE
+from cVAE_train_utils2 import train_cVAE
 
 
 parser = argparse.ArgumentParser(description='Control the parameters of the model')
@@ -48,7 +48,7 @@ print("path to dataset set to ",path)
 print("input size set to ",input_size)
 print("saving_path set to ",saving_path)
 
-device = 'cuda:2' if torch.cuda.is_available() else 'cpu'
+device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
 batch_size = 128
 
 # Define a transform to preprocess the data
