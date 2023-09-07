@@ -63,9 +63,7 @@ Before you begin, ensure that you have the following prerequisites installed on 
 You can now use the Python script `train_cVAE.py` to train your cVAE model. Customize the following command to suit your dataset and training preferences:
 
 ```bash
-cd .\VAE\CVAE\
-
-python train_cVAE.py --latent_dim <latent_dim> --beta <beta> --epochs <epochs> --path <dataset_path> --input_size <input_size> --saving_path <saving_path>
+sh script_run/cVAE.sh
 ```
 
 - `--latent_dim`: Set the dimension of the latent space (default is 64).
