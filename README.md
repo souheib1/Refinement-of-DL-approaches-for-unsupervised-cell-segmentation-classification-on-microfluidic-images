@@ -144,7 +144,9 @@ The segmentation masks are used to extract cell patches from the image by genera
 
 ### 3. Refine VAE (variational auto-encoder) and cVAE (conditional variational auto-encoder) approaches for unsupervised clustering to several datasets with different mutations and experimental conditions.
 
-#### 3.1 MNIST dataset: 
+#### Architecture 1 : 
+
+##### 3.1 MNIST dataset: 
 
 ![dd](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/16de79c2-d915-42df-b045-b9c5b2ba90c8)
 
@@ -157,7 +159,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 | Mnist_Z_32  | 0.9042 |  0.184489 | 2.4797  |  712.183 |
 
 
-#### 3.2 FashionMNIST dataset:
+##### 3.2 FashionMNIST dataset:
 
 ![ee](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/58692ffe-d72c-41b9-8999-cedf2cc319d0)
 
@@ -169,7 +171,7 @@ The segmentation masks are used to extract cell patches from the image by genera
 | FashioMnist_Z_16  | 0.9  |  0.209225  | 2.02346  | 944.545  |
 | FashionMnist_Z_32   |     0.970153      |     0.217652 | 1.75011 |  807.943 |
 
-#### 3.3 Wild-type cells vs BRAF mutant:
+##### 3.3 Wild-type cells vs PIK3CA mutant:
 
 ![tt](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/ec6c051b-8f82-493e-8fe4-710a084ba9fc)
 
@@ -183,10 +185,24 @@ The segmentation masks are used to extract cell patches from the image by genera
 | 2 | 98 | 7.29% | 92.71% |
 | 3 | 381 | 72.58% | 27.42% |
 
-**Research Internship - 2023 at Télécom Paris**
+#### Architecture 2: 
+
+##### Wild-type cells vs PIK3CA mutant: 
+
+![output](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/ad77b0bf-a7cd-413f-95a6-f6f050223a29)
+
+![output2](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/3d3351af-5f8a-4645-9ee8-e09c9332e576)
+
+![output3](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/c9b06927-4f8d-4374-a4ca-20f4e49aaca1)
+
+| Silhouette score | Davies-Bouldin Index | Calinski-Harabasz Index |
+| ------------- | ------------- | ------------- |
+| 0.4242 | 0.7850 | 3869.3416 |
 
 ## References
 <a id="1">[1]</a> 
 Stringer, C., Wang, T., Michaelos, M., & Pachitariu, M. (2021). 
 Cellpose: a generalist algorithm for cellular segmentation. 
 Nature methods, 18(1), 100-106.
+
+**Research Internship - 2023 at Télécom Paris**
