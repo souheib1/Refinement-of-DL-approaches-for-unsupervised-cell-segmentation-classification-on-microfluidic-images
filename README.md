@@ -191,7 +191,8 @@ The segmentation masks are used to extract cell patches from the image by genera
 
 ![output](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/ad77b0bf-a7cd-413f-95a6-f6f050223a29)
 
-![output2](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/3d3351af-5f8a-4645-9ee8-e09c9332e576)
+![output2](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/50fd42f6-ef8a-4b15-8462-dd68082550a2)
+
 
 ![output3](https://github.com/souheib1/Refinement-of-DL-approaches-for-unsupervised-cell-segmentation-classification-on-microfluidic-images/assets/73786465/c9b06927-4f8d-4374-a4ca-20f4e49aaca1)
 
