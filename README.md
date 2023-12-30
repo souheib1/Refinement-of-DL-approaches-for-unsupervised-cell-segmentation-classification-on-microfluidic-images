@@ -79,15 +79,15 @@ Example usage:
 python train_cVAE.py --latent_dim 64 --beta 1.0 --epochs 50 --path ./custom_dataset/ --input_size 192 --saving_path ./trained_models/
 ```
 
-Please make sure that your custom dataset adheres to the specified structure and preprocessing requirements as described in the "Dataset Preparation" section below.
+Please ensure that your custom dataset adheres to the specified structure and preprocessing requirements described in the "Dataset Preparation" section below.
 
 #### Dataset Preparation
 
-To prepare your custom dataset for training, ensure that it follows this structure:
+To prepare your custom dataset for training a customized conditional VAE, ensure that it follows this structure:
 
 - Place your images in a folder.
-- Organize images into subfolders, each representing a class or category.
-- Resize images to the desired input size (e.g., 192x192 pixels).
+- Organize images into subfolders, each representing a category ( a mutation in our case).
+- Resize images to the desired input size (e.g., 192x192 pixels in our case).
 
 Example dataset structure:
 
